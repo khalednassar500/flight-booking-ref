@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Airport</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content="width=device-width,initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href="./styles/site.css">
+  </head>
+  <body class='repla ce'>
+    <nav>
+      <div id='logo'>
+        <div>
+          <img src='./images/plane.png'>
+          <p>Airport</p>
+        </div>
+
+      </div>
+      
+      <ul id='nav_links'>
+        <li>
+          <a href="#home" onclick='closeChoosing()'>HOME</a>
+          <a href="#about"  onclick='closeChoosing()'>ABOUT</a>
+          <a href="#our_feature"  onclick='closeChoosing()'>OUR FEATURE</a>
+          <a href="#contact"  onclick='closeChoosing()'>CONTACT</a>
+        </li>
+      </ul>
+
+      <div id='register_status'>
+        <button id='sign_up_button' onclick='sign("sign-up")'> Sign up</button>
+        <button id='sign_in_button' onclick='sign("sign-in")'> Sign in</button>
+      </div>
+
+      <div id='avatar' class='signed'>
+        <img src='./images/boy.svg' onclick='openChoosing()'>
+        <p class="open" id='counter'>0</p>
+      </div>
+    </nav>
+
+    <header id='home'>
+      <h1>
+        Pack your luggage<br>
+        Your <span>next trip</span> will be <span>with us</span>
+      </h1>
+
+      <form action="javascript: void(0)" id='choosing' title="Sign in or Sign up" class='unvisibile'>
+        <input type='text' name='from' placeholder="From" required>
+        <input type='text' name='to' placeholder="To" required>
+        <input type='date' name='date' required>
+        <button type='submit' onclick='submitChoosing(this)'>Submit</button>
+      </form>
+      <img src='./images/air-traffic.png'>
+    </header>
+
+    <main>
+      <section id='about'>
+        <h2><span>__</span>ABOUT US<span>__</span></h2>
+        <p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+      </section>
+      
+      <section id='our_feature'>
+        <h2><span>__</span>OUR FEATURE<span>__</span></h2>
+        <section>
+          <div>
+            <img src='./images/no-food.png'>
+            <p>Five-star service on the plane</p>
+          </div>
+          <div>
+            <img src='./images/reception.png'>
+            <p>Enjoy a safe journey</p>
+          </div>
+          <div>
+            <img src='./images/cash.png'>
+            <p>Fantastic prices</p>
+          </div>
+        </section>
+      </section>
+      
+      <h2><span>__</span>CONTACT US<span>__</span></h2>
+      <form action="#" id='contact'>
+        <div>
+          <input type='text' name='first-name' placeholder="First Name" required>
+          <input type='text' name='last-name' placeholder="last Name" required>
+        </div>
+        <input type="email" name='email' placeholder="E-mail" required>
+        <textarea placeholder="Massage" required></textarea>
+        <button type="submit">SEND</button>
+      </form>
+    </main>
+
+    <section id='register' class='open'>  <!-- when press sign in or sign up buttons -->
+      <form id='sign_in'>
+        <fieldset>
+          <legend>Sign in</legend>
+          <input type='email' name='email' placeholder="user-name or E-mail" required> 
+          <input type='text' name='password' placeholder="password" required> 
+          <button type='submit' onclick='sign("submit")'>Submit</button>
+        </fieldset>
+      </form>
+
+      <form action="#" id='sign_up'>
+        <fieldset>
+          <legend>Sign up</legend>
+          <input type='text' name='first-name' placeholder="First Name" required> 
+          <input type='text' name='last-name' placeholder="Last Name" required> 
+          <input type='email' name='email' placeholder="E-mail" required> 
+          <input type='email' name='password' placeholder="password" required> 
+          <button type='submit' onclick='sign("submit")'>Submit</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <table id='choosing_table'>
+      <tr>
+        <th></th>
+        <th>From</th>
+        <th>to</th>
+        <th>date</th>
+      </tr>
+    </table>
+    <script src='./scripts/site.js'></script>
+  </body>
+</html>
